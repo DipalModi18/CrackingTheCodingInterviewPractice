@@ -19,6 +19,7 @@ function sumTo(n):
     const solutionToSubproblem = sumTo(n-1)
     return solutionToSubproblem + n
 ```
+we took the solution to our subproblem and found how it’s used to solve the original problem. This is known as finding the recurrence
 
 - We need to add base case to stop it  
 To pick up a base case, think of the following:  
