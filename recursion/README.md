@@ -26,3 +26,31 @@ To pick up a base case, think of the following:
 **What is the _EASIEST POSSIBLE VALUE_ you can put into the function that requies no extra calculation?**
 
 **Reference**: [How to Think Recursively | Solving Recursion Problems in 4 Steps](https://medium.com/swlh/how-to-think-recursively-solving-recursion-problems-in-4-steps-95a6d07aa866)
+
+## Time Complexity
+- Given a recursion algorithm, its time complexity O(T) is typically the product of the number of recursion invocations (denoted as R) and the time complexity of calculation (denoted as O(S)) that incurs along with each recursion call:
+```buildoutcfg
+O(T) = R * O(S)
+```
+- For Example, Fibonacci numbers
+![Test Image 1](fibonacci.png) Here, the total number of nodes is 2<sup>n</sup> -1 = R   
+At each step O(S) = O(1)  
+So,  O(T) = O(2<sup>n</sup>)  
+Using memoization, the time complexity can be reduced to O(n)
+
+**Reference**: [Time Complexity](https://leetcode.com/explore/learn/card/recursion-i/256/complexity-analysis/1669/)
+
+
+## Space Complexity
+1. Recursion related space
+- Space that is incurred directly by the recursion i.e. the stack to keep track of recursive function calls. It includes,  
+  1. The returning address of the function call
+  2. The parameters that are passed to the function call
+  3. The local variables within the function call, once the function call is done, this space is freed
+ - For recursive algorithms, the function calls chains up successively until they reach a bash case. This implies that the space that is used for each function call is added.
+2. Non Recursion related space
+- Space used for global variables
+- Space used for saving the intermediate results i.e. memoization  
+
+**Reference**: [Space Complexity](https://leetcode.com/explore/learn/card/recursion-i/256/complexity-analysis/1671/)
+
